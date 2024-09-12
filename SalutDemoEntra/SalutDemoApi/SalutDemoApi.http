@@ -1,0 +1,6 @@
+@SalutDemoApi_HostAddress = http://localhost:5078
+
+GET {{SalutDemoApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

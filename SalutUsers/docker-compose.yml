@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  salutusermanagement.api:
+    image: ${DOCKER_REGISTRY-}webapi
+    container_name: salutusermanagement-api
+    build:
+      context: .
+      dockerfile: Web.API/Dockerfile
+
+  salutusermanagement.db:
+    image: postgres:latest
+    container_name: salutusermanagement-db
+    environment:
+      - POSTGRES_DB=salutusermanagement
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./.containers/db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  

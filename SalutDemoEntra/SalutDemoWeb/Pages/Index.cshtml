@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <div style="text-align: left">
+        
+        <p>
+            <input type="button" value="Get demo data from API" onclick="location.href='/demo'" />
+        </p>
+
+        <p>Claims:</p>
+        @{
+            var claims = User.Claims;
+            foreach (var claim in claims)
+            {
+                <span><b>@claim.Type</b>: @claim.Value</span>
+                <br/>
+            }
+        }
+    </div>
+
+</div>

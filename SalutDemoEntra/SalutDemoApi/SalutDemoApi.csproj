@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-SalutDemoApi-8d4b9a5d-0a96-4b7d-8bc0-4227963e8738</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.8" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.8" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Identity.Web.DownstreamApi" Version="3.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.7.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "0ab05029-85c3-4109-be08-6b9ebaf318a9",
+		"name": "Salut B2C",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12174279"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"step\": \"PostAttributeCollection\",\r\n    \"client_id\": \"09a957c8-0ca6-4adf-8ced-fd7dbc34cad5\",\r\n    \"extension_2f81fe04720f466bb320e0a080bf6670_Hobby\": \"Sleeping\",\r\n    \"extension_2f81fe04720f466bb320e0a080bf6670_Age\": 44,\r\n    \"ui_locales\": \"en-US\",\r\n    \"country\": \"Andorra\",\r\n    \"email\": \"devatk11@hotmail.com\",\r\n    \"displayName\": \"Andrii H\",\r\n    \"identities\": [\r\n        {\r\n            \"signInType\": \"emailAddress\",\r\n            \"issuer\": \"atk0b2c.onmicrosoft.com\",\r\n            \"issuerAssignedId\": \"devatk11@hotmail.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://connect.devatk.org/connect/create",
+					"protocol": "https",
+					"host": [
+						"connect",
+						"devatk",
+						"org"
+					],
+					"path": [
+						"connect",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"step\": \"PreTokenIssuance\",\r\n    \"client_id\": \"09a957c8-0ca6-4adf-8ced-fd7dbc34cad5\",\r\n    \"extension_2f81fe04720f466bb320e0a080bf6670_Hobby\": \"Reading\",\r\n    \"extension_2f81fe04720f466bb320e0a080bf6670_Age\": 33,\r\n    \"ui_locales\": \"en-US\",\r\n    \"email\": \"devatk11@gmail.com\",\r\n    \"objectId\": \"3c8670c5-69a2-4667-b9a4-7badedac0a5b\",\r\n    \"displayName\": \"Andrii G\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://connect.devatk.org/connect/auth",
+					"protocol": "https",
+					"host": [
+						"connect",
+						"devatk",
+						"org"
+					],
+					"path": [
+						"connect",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
